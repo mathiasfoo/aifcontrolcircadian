@@ -1,7 +1,7 @@
 function dC = AD2015_AIFControl_ODE(t,C)
 
 
-global theta Rf eta theta1 theta2
+global theta Rf eta theta1 theta2 gammaC
 
 dC = zeros(11,1);
 
@@ -38,6 +38,6 @@ dC(9) = theta(27)*C(8) - theta(28)*C(9);
 %% AIF Controller
 
 % Z1
-dC(10) = real(Rf - eta*C(10)*C(11));
+dC(10) = real(Rf - eta*C(10)*C(11) - gammaC*C(10));
 % Z2
-dC(11) = real(theta2*C(1) - eta*C(10)*C(11));
+dC(11) = real(theta2*C(1) - eta*C(10)*C(11) - gammaC*C(11));
