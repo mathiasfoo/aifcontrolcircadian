@@ -4,11 +4,12 @@ close all
 
 %% Loading all the experimental WT data under different light condition.
 
-global theta Rf eta theta1 theta2
+global theta Rf eta theta1 theta2 gammaC
 
 eta = 1793; 
 theta1 = 3;
 theta2 = 1;
+gammaC = 1.5;
 
 load neurosporaLLdata.mat
 load neurosporareferenceSS.mat
