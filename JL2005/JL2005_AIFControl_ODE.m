@@ -1,7 +1,7 @@
 function dC = JL2005_AIFControl_ODE(t,C)
 
 
-global EL theta Rf eta theta1 theta2
+global EL theta Rf eta theta1 theta2 gammaC
 
 dC = zeros(7,1);
 
@@ -32,6 +32,6 @@ dC(7) = real(theta(20)*(1 - EL) - theta(21)*C(7) - theta(22)*EL*C(7));
 %% AIF Controller
 
 % Z1
-dC(8) = real(Rf - eta*C(8)*C(9));
+dC(8) = real(Rf - eta*C(8)*C(9) - gammaC*C(8));
 % Z2
-dC(9) = real(theta2*C(1) - eta*C(8)*C(9));
+dC(9) = real(theta2*C(1) - eta*C(8)*C(9) - gammaC*C(9));
