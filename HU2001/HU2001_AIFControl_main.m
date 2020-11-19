@@ -5,7 +5,7 @@ close all
 %% Loading all the experimental WT data under different light condition.
 
 
-global theta Rf eta theta1 theta2
+global theta Rf eta theta1 theta2 gammaC
 
 load drosophila2001LLdata.mat
 load drosophila2001referencev1.mat 
@@ -13,6 +13,7 @@ load drosophila2001referencev1.mat
 eta = 105.6; 
 theta1 = 5;
 theta2 = 1;
+gammaC = 1.5;
 
 %% Model Parameters
 prmPER = [0.4618,1.2751,-0.013493,0.5238];
