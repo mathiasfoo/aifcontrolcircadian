@@ -4,11 +4,12 @@ clear all
 
 % De Caluwe et al (2016) FPS
 
-global theta EL eta theta1 theta2 Rf
+global theta EL eta theta1 theta2 Rf gammaC
 
 eta = 100; 
 theta1 = 2;
 theta2 = 1;
+gammaC = 1.5;
 
 load DeCaluwe2016FPS12L12DLLdata.mat
 load JD2016referencesim.mat
