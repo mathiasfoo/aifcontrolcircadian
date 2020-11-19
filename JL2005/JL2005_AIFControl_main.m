@@ -2,12 +2,13 @@ clc
 clear all
 close all
 
-global EL theta Rf eta theta1 theta2
+global EL theta Rf eta theta1 theta2 gammaC
 
 % AIF Controller parameters
 eta = 10;
 theta1 = 1;
 theta2 = 1;
+gammaC = 1.5;
 
 load LockeJTB_training.mat
 load JL2005referencesim.mat
